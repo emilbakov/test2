@@ -1,8 +1,28 @@
 {% load leaflet_tags %}
+{% load static %}
+
 <html>
   <head>
     {% leaflet_js %}
     {% leaflet_css %}
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+
+    <nav class=" bg-black font-sans flex flex-col text-center content-center sm:flex-row sm:text-left">
+      <div class="mb-2 sm:mb-0 flex flex-row ">
+            <div class="h-12 w-12 self-center mr-2">
+                    <img class="h-12 w-12 self-center " src="" />    
+            </div>
+            <div class="mt-2">
+                <a href="{% url 'home' %}" class="mb-0 text-3xl no-underline text-grey-darkest ">
+            </div>
+      </div>
+      <div class="sm:mb-0 self-center text-2xl font-bold">
+            <a href="" class="text-white mr-7 hover:text-red-900">Лов в България</a>
+            <a href="" class="text-white mr-7 hover:text-red-900">Ловни стопанства</a>
+            <a href="" class="text-white mr-1 hover:text-red-900">Дивеч</a>
+            <a href="" class="text-white ml-7 hover:text-red-900">Карта</a>
+      </div>
+    </nav>
     <style>
       .leaflet-container { height: 100%; }
     </style>
@@ -28,7 +48,10 @@
     </script>
   </head>
   <body>
-    <h1>Mushrooms Spots</h1>
-    {% leaflet_map "main" %}
+    <div class='container border-2 '>
+    
+      <h1>Mushrooms Spots</h1>
+      {% leaflet_map "main" %}
+    </div>  
   </body>
 </html>

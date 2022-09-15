@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-99n+*%w#f$c(1z&6hyvzx==az2qa^zf*(()7@ah8_8ri87^j$j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['159.223.25.121','localhost']
+ALLOWED_HOSTS = ['159.223.25.121','localhost','127.0.0.1']
 
 
 # Application definition
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'huntmap.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,10 +83,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'huntmap',
-        'USER': 'huntroot',
-        'PASSWORD': 'hunt444',
+        'USER': 'postgres',
+        'PASSWORD': '32560',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
      }
 }
 
@@ -155,3 +155,7 @@ LEAFLET_CONFIG = {
     'ATTRIBUTION_PREFIX': 'Стрелям'
 
 }
+# gdal
+GDAL_LIBRARY_PATH = r'C:\OSGeo4W\bin\gdal305.dll'
+GEOS_LIBRARY_PATH = r'C:\OSGeo4W\bin\geos_c.dll'
+PROJ_LIBRARY_PATH = r'C:\OSGeo4W\share\proj'

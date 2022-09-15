@@ -1,0 +1,27 @@
+{% load static %}
+{% load leaflet_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% leaflet_js %}
+    {% leaflet_css %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+    
+    
+</head>
+<body>
+    {% include "navbar.html" %}
+    {% block content %} 
+    {% endblock content%}
+    <div class="container border-2 border-gray-200 border-opacity-60 rounded-lg mx-auto m-5 flex flex-wrap p-5 "> 
+        {% leaflet_map "main" %}
+    </div>
+    {% block extra_body %}
+    {% endblock extra_body %}
+
+    {% include "scripts.html" %}
+    {% include "footer.html" %}
+</body>

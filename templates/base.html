@@ -15,10 +15,9 @@
 <body>
     {% include "navbar.html" %}
     {% block content %} 
-    {% endblock content%}
-    <div class="container border-2 border-gray-200 border-opacity-60 rounded-lg mx-auto m-5 flex flex-wrap p-5 "> 
-        {% leaflet_map "main" %}
-    </div>
+    {% endblock content %}
+    
+    
     {% block extra_body %}
     {% endblock extra_body %}
 

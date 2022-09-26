@@ -5,4 +5,13 @@
 <div class="container m-5 border-2 border-black">
 {% leaflet_map "main" %}  
 </div>
+<script>
+  const button = document.querySelector('#menu-button');
+  const menu = document.querySelector('#menu');
+
+
+  button.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 {% endblock content %}

@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'huntmap',
         'USER': 'postgres',
-        'PASSWORD': '32560',
+        'PASSWORD': '030132560',
         'HOST': 'localhost',
         'PORT': '5432',
      }
@@ -156,6 +156,6 @@ LEAFLET_CONFIG = {
 
 }
 # gdal
-GDAL_LIBRARY_PATH = r'C:\OSGeo4W\bin\gdal305.dll'
+GDAL_LIBRARY_PATH = r'C:\OSGeo4W\bin\gdal306.dll'
 GEOS_LIBRARY_PATH = r'C:\OSGeo4W\bin\geos_c.dll'
 PROJ_LIBRARY_PATH = r'C:\OSGeo4W\share\proj'

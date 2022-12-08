@@ -9,9 +9,10 @@ from django.urls import path
 from . import views
 
 urlpatterns = [   
-    re_path('', views.SpotListView.as_view(), name='spots'),
-    re_path('spot/<int:pk>/', views.SpotDetailView.as_view(), name='spot-detail'),
+    path('spots/', views.SpotListView.as_view(), name='spots'),
 
-    
+    # re_path('', views.SpotListView.as_view(), name='spots'),    
+    re_path(r'spot/(?P<pk>\d+)/$', views.SpotDetailView.as_view(), name='spot-detail'),
+    path(r'spotche/<int:id>/', views.detail_view)
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

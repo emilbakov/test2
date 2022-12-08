@@ -3,7 +3,7 @@
 {% comment %} nav2 {% endcomment %}
 <nav class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-white bg-gray-800">
         <div>
-          <a href="">
+          <a href="{% url 'home' %}">
             <div class="flex flex-shrink-0 items-center">
               <img class="block h-8 w-auto lg:hidden" src="{% static 'logo11.png'%}" alt="HUNTDESTINATIONBG">
               <img class="hidden h-8 w-auto lg:block" src="{% static 'logo11.png'%}" alt="HUNTDESTINATIONBG">
@@ -25,7 +25,7 @@
               <a class="md:p-4 py-2 block hover:text-purple-400"  href="">Лов в България</a>
             </li>
             <li>
-              <a class="md:p-4 py-2 block hover:text-purple-400" href="">Ловни стопанства</a>
+              <a class="md:p-4 py-2 block hover:text-purple-400" href="{% url 'spots' %}">Ловни стопанства</a>
             </li>
             <li>
               <a class="md:p-4 py-2 block hover:text-purple-400" href="">Дивеч</a>

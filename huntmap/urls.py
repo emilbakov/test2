@@ -11,7 +11,7 @@ from core.models import HuntSpot
 
 
 urlpatterns = [
-    path('listing/', include('listing.urls')),
+    re_path(r'listing/', include('listing.urls')),
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^$', TemplateView.as_view(template_name='index.html'), name='home'),
     re_path(r'^data.geojson$', GeoJSONLayerView.as_view(model=HuntSpot, properties=('title', 'description', 'picture_url')), name='data')
